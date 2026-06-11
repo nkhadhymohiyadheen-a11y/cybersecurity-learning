@@ -7,7 +7,7 @@ My cybersecurity learning journey, projects, notes, and practice labs.
 - Build Cybersecurity Projects
 - Improve Python Skills
 ## Projects
-- Password Generator (in progress)
+- Password Generator completed
 ## Platforms
 - GitHub
 - TryHackMe
