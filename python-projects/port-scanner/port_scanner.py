@@ -1,6 +1,6 @@
 import socket
 
-target = input("Enter IP address: ")
+target = input("Enter IP address or hostname: ")
 
 print(f"\nScanning {target}...\n")
 
