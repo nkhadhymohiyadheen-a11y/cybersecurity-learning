@@ -4,13 +4,16 @@ target = input("Enter IP address or hostname: ")
 
 ip = socket.gethostbyname(target)
 
+start_port = intc(input("enter start port: "))
+end_port = int(input("enter end port: "))
+
 print(f"Hostname: {target}")
 print(f"IP Address: {ip}")
-print(f"\nScanning {ip}...\n")
+print(f"\nScanning ports {start_port} to {end_port)...\n")
 
-for port in [22, 80, 443]:
+for port in range(start_port, end_port + 1):
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.settimeout(1)
+    s.settimeout(0.5)
 
     result = s.connect_ex((ip, port))
 
