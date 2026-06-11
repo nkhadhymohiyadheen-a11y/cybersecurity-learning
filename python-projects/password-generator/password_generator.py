@@ -6,7 +6,7 @@ length = int(input("Enter password length: "))
 if length < 8:
     print("Password length must be at least 8 characters.")
     exit()
-
+    
 include_numbers = input("Include numbers? (y/n): ").lower()
 include_symbols = input("Include symbols? (y/n): ").lower()
 
