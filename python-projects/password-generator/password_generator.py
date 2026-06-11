@@ -17,7 +17,16 @@ if include_numbers == "y":
 
 if include_symbols == "y":
     characters += string.punctuation
-count = int(input("How many password to generate?"))
+
+count = int(input("How many passwords to generate? "))
+
+if length < 10:
+    strength = "Weak"
+elif length < 15:
+    strength = "Medium"
+else:
+    strength = "Strong"
+
 for p in range(count):
     password = ""
 
@@ -25,4 +34,5 @@ for p in range(count):
         password += random.choice(characters)
 
     print(f"\nGenerated Password {p+1}: {password}")
-print("Password Strength:", strength)
+
+print(f"\nPassword Strength: {strength}")
