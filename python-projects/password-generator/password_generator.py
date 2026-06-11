@@ -3,11 +3,26 @@ import string
 
 length = int(input("Enter password length: "))
 
-characters = string.ascii_letters + string.digits + string.punctuation
+if length < 8:
+    print("Password length must be at least 8 characters.")
+    exit()
 
-password = ""
+include_numbers = input("Include numbers? (y/n): ").lower()
+include_symbols = input("Include symbols? (y/n): ").lower()
 
-for i in range(length):
-    password += random.choice(characters)
+characters = string.ascii_letters
 
-print("Generated Password:", password)
+if include_numbers == "y":
+    characters += string.digits
+
+if include_symbols == "y":
+    characters += string.punctuation
+count = int(input("How many password to generate?"))
+for p in range(count):
+    password = ""
+
+    for i in range(length):
+        password += random.choice(characters)
+
+    print(f"\nGenerated Password {p+1}: {password}")
+print("Password Strength:", strength)
