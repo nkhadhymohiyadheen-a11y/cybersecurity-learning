@@ -8,6 +8,7 @@ My cybersecurity learning journey, projects, notes, and practice labs.
 - Improve Python Skills
 ## Projects
 - Password Generator completed
+- Port Scanner
 ## Platforms
 - GitHub
 - TryHackMe
