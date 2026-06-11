@@ -4,7 +4,7 @@ target = input("Enter IP address or hostname: ")
 
 print(f"\nScanning {target}...\n")
 
-for port in range [21,22,23,25,53,80,110,143,443]:
+for port in [21,22,23,25,53,80,110,143,443]:
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
     s.settimeout(0.1)
